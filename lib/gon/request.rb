@@ -13,9 +13,13 @@ class Gon
       @request_id if defined? @request_id
     end
 
+    alias_method :uuid, :id
+
     def id=(request_id)
       @request_id = request_id
     end
+
+    alias_method :uuid=, :id=
 
     def gon
       @gon
